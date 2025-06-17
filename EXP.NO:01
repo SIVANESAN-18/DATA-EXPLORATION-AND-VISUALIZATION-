@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+    'Name': ['John', 'Jane', 'Mine', 'Emily' ,'Alex'],
+    'Age': [25, 30, 22, 28, 35],
+    'Score': [90, 85, 78, 95, 88]
+}
+df = pd.DataFrame(data)
+print("Data Frame:")
+print(df)
+print("\n Data Analysis: ")
+print("/n Mean Age",df['Age'].mean())
+print("\n Maximum Score: ", df['Score'].max())
+print("\n Minimum Score: ", df['Score'].min())
+plt.figure(figsize=(8, 4))
+plt.bar(df['Name'], df['Score'])
+plt.xlabel('Name')
+plt.ylabel('Score')
+plt.title('Score of Students')
+plt.show()
